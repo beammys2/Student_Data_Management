@@ -1,0 +1,31 @@
+{% extends 'app/main.html' %}
+{% block content %}
+<h2>Details of the Students</h2>
+                <table id="stud">
+                    <tr>
+                        <th>Registration Number</th>
+                        <th>Name</th>
+                        <th>Class</th>
+                        <th>Section</th>
+                        <th>Roll Number</th>
+                        <th>Percentage</th>
+                        <th>Gender</th>
+                        <th>Phone Number</th>
+                        <th>Address</th>
+                    </tr>
+                    {% for k in Set %}
+                    <tr>
+                        <td>{{k.Reg}}</td>
+                        <td>{{k.Name}}</td>
+                        <td>{{k.Class}}</td>
+                        <td>{{k.Section}}</td>
+                        <td>{{k.Rollno}}</td>
+                        <td>{{k.Percentage}}</td>
+                        <td>{{k.Gender}}</td>
+                        <td>{{k.Phone}}</td>
+                        <td>{{k.Address}}</td>
+            
+                    </tr>
+ {% endfor %}
+  </table>
+  {% endblock content %}

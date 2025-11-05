@@ -1,0 +1,258 @@
+<html> 
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"></script>
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'> 
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">  
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=PT+Serif&display=swap" rel="stylesheet">
+    <head>
+        <style>
+            aside {
+              color: #fff;
+              width: 250px;
+              padding-left: 20px;
+              height: 72vh;
+              background-image: linear-gradient(30deg , #0048bd, #44a7fd);
+              border-top-right-radius: 80px;
+            }
+            
+            aside a{
+              font-size: 20px;
+              color: #fff;
+              display: block;
+              padding: 12px;
+              padding-left: 30px;
+              text-decoration: none;
+              -webkit-tap-highlight-color:transparent;
+            }
+            
+            aside a:hover {
+              color: #3f5efb;
+              background: #fff;
+              outline: none;
+              position: relative;
+              background-color: #fff;
+              border-top-left-radius: 20px;
+              border-bottom-left-radius: 20px;
+            }
+            
+            aside a i {
+              margin-right: 10px;
+            }
+            
+            aside a:hover::after {
+              content: "";
+              position: absolute;
+              background-color: transparent;
+              bottom: 100%;
+              right: 0;
+              height: 3px;
+              width: 35px;
+              border-bottom-right-radius: 18px;
+              box-shadow: 0 20px 0 0 #fff;
+            }
+            
+            aside a:hover::before {
+              content: "";
+              position: absolute;
+              background-color: transparent;
+              top: 38px;
+              right: 0;
+              height: 20px;
+              width: 35px;
+              border-top-right-radius: 18px;
+              box-shadow: 0 -20px 0 0 #fff;
+            }
+            
+            aside p {
+              margin: 0;
+              padding: 40px 0;
+            }
+            
+            body {
+              font-family: 'Roboto';
+              width: 100%;
+              height: 100vh;
+              margin: 0;
+              font-size: 20px;
+            }
+           
+            .container{
+              display:grid;
+              grid-template-columns:0.5fr 2.5fr;
+              grid-gap:40px;
+            }
+            nav {
+      
+              display: flex;
+            
+              justify-content: space-around;
+            
+              align-items: center;
+            
+              min-height: 8vh;
+            
+              background:linear-gradient(90deg,lightblue 0%,deepskyblue 43%,dodgerblue 100%);
+            
+            }
+            nav i{
+              font-size:50px;
+            }
+            
+            .heading {
+            
+              color: black;
+            
+              text-transform: uppercase;
+            
+              letter-spacing:3px;
+            
+              font-size: 25px;
+              font-family: 'Playfair Display', serif;
+            
+            }
+            .grid-container {
+              display: grid;
+              grid-template-columns: auto auto auto;
+              background-color: #2196F3;
+              padding: 10px;
+            }
+            .grid-item {
+              background-color: rgba(255, 255, 255, 0.8);
+              border: 1px solid rgba(0, 0, 0, 0.8);
+              padding: 20px;
+              font-size: 25px;
+              text-align: center;
+            }
+            .right{
+              text-align:left;
+              font-size:20px;
+              font-family: font-family: 'Libre Baskerville', serif;
+            }
+            .grid-stren{
+              display: grid;
+              grid-template-columns: repeat(4, 1fr);
+              gap: 10px;
+              grid-auto-rows: 100px;
+             
+              padding: 20px 0;
+            }
+            .grid-stren :nth-child(11n + 1) {
+              grid-column: span 2;
+            }
+    
+            .grid-stren > div {
+              background-color: rgba(255, 255, 255, 0.8);
+              box-shadow: 10px 10px lightskyblue;
+              text-align: center;
+              padding: 20px 0 ;
+              font-size: 20px;
+            }
+          .button-88 {
+            display: flex;
+            align-items: center;
+            font-family: inherit;
+            font-weight: 500;
+            font-size: 20px;
+            padding: 0.7em 1.4em 0.7em 1.1em;
+            color: white;
+            background: #ad5389;
+            background: linear-gradient(0deg, rgba(0,0,255) 0%, rgba(0,0,255) 100%);
+            border: none;
+            box-shadow: 0 0.7em 1.5em -0.5em #2196F3;
+            letter-spacing: 0.05em;
+            border-radius: 20em;
+            cursor: pointer;
+            user-select: none;
+            -webkit-user-select: none;
+            touch-action: manipulation;
+          }
+
+          .button-88:hover {
+            box-shadow: 0 0.5em 1.5em -0.5em #2196F3;
+          }
+
+          .button-88:active {
+            box-shadow: 0 0.3em 1em -0.5em #2196F3;
+          }
+        
+          #stud {
+            font-family:'PT Serif', serif;
+            border-collapse: collapse;
+            width: 100%;
+          }
+          
+          #stud td, #stud th {
+            border: 1px solid #3f5efb;
+            padding: 8px;
+          }
+          
+          #stud tr:nth-child(even){background-color: #f2f2f2;}
+          
+          #stud tr:hover {background-color: #ddd;}
+          
+          #stud th {
+            padding-top: 12px;
+            padding-bottom: 12px;
+            text-align: left;
+            background-color: #3f5efb;
+            color: white;
+          }
+          .footer {
+            position: sticky;
+            right: 0;
+            bottom: 0;
+            width: 100%;
+            height:50px;
+            background:linear-gradient(90deg,lightblue 0%,deepskyblue 43%,dodgerblue 100%);
+            color: black;
+            text-align: center;
+            font-family: 'PT Serif', serif;
+            font-size:10px;
+         }
+        </style>
+    </head>
+    <body>
+        <nav>
+            <i class='fas fa-school'></i>
+            <div class="heading"> <h1><u>Student Data Management System</h1> </u></div>
+        </nav>
+        <div class="container">
+            <div class="left">
+                <aside>
+                    <p>
+                      <i class='fa fa-bars'></i> Menu  </p>
+                    <a href="/home"> <i class='fa fa-home'></i>   
+                        Home
+                    </a>
+                    <a href="/insert"><i class='fa fa-user'></i>
+                        Add Student
+                    </a>
+                    <a href="/delete"><i class="fa fa-trash"></i>
+                        Remove Student
+                    </a>
+                    <a href="/update"><i class='fas fa-user-edit'></i>
+                      Update Student
+                  </a>
+                    <a href="/search"><i class="fa fa-search"></i>
+                        Search
+                    </a> 
+                    <a href="/display"><i class='fa fa-photo'></i>
+                        Display
+                    </a>
+                </aside>
+            </div>
+
+            <div class="right">
+                {% block content %}
+                {% endblock content%}  
+            </div>
+        </div>
+    
+    <div class="footer">
+      <h2>Done by Almas &#9829 </h2>
+      <p><a href="https://www.shaikalmas105@gmail.com" target="_blank">shaikalmas105@gmail.com</a></p>
+    </div>
+  </body>
+</html>

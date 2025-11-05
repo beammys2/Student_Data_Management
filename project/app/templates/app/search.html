@@ -1,0 +1,11 @@
+{% extends 'app/main.html' %}
+{% block content %}
+<p><h3> Enter the Name of the Student:</h3>
+  <form method='POST'>
+      {% csrf_token %}
+      {{form.name}}
+  </p>
+      <p><button class="button-88" role="button">Search</button></p>
+
+  </form>
+  {% endblock content %}

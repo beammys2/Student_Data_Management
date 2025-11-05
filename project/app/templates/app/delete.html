@@ -1,0 +1,10 @@
+{% extends 'app/main.html' %}
+{% block content %}
+<form method='POST'>
+  <h2>Enter the Registration Number</h2>
+  {% csrf_token %}
+  {{form}}
+  <p>
+  <button class="button-88" role="button">Delete</button></p>
+</form>
+{% endblock content %}

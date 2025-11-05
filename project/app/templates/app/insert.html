@@ -1,0 +1,30 @@
+{% extends 'app/main.html' %}
+{% block content %}
+<h2>Enter the details</h2>
+                <form method='post'>
+                    {% csrf_token %}
+                    <p>Enter the Registration Number of the Student:</p>
+                    {{form.reg}}
+                    <p>Enter the Name of the Student:</p>
+                    {{form.name}}
+                    <p>Enter the Class  of the Student:</p>
+                    {{form.clas}}
+                    <p>Enter the Section of the Student:</p>
+                    {{form.section}}
+                    <p>Enter the Roll Number of the Student:</p>
+                    {{form.rollno}}
+                    <p>Enter the Percentage of the Student:</p>
+                    {{form.percentage}}
+                    <p>Enter the  Gender of the Student:</p>
+                    {{form.gender}}
+                    <p>Enter the Phone Number of the Student:</p>
+                    {{form.phone}}
+                    <p>
+                    <p>Enter the Address of the Student:</p>
+                    {{form.address}}
+                    <p>
+                      <button class="button-88" role="button">Insert</button></p>
+                      
+                </form>
+
+                {% endblock content %}          
